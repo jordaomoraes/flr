@@ -6,11 +6,32 @@
 
 :root {
   --white: #ffffff;
-  --gray-50:#e1e1e6;
+  --gray-100: #e1e1e6;
+  --gray-300: #a8a8b3;
+  --gray-800: #a8a8b3;
+  --gray-900: #121214;
+  --blue-header:#011164;
+  --blue-main:#DCEEF6;
 
+  --cyan-500: #61dafb;
+  --yellow-500: #1bbd16;
+}
+
+@media (max-width: 1080px) {
+  html {
+    font-size: 93.75%;
+  }
+}
+
+@media (max-width: 720x) {
+  html {
+    font-size: 87.5%;
+  }
 }
 
 body {
+  background-color: var(--blue-main);
+  color: var(--gray-800)
 }
 
 body,
@@ -18,7 +39,7 @@ input,
 textarea,
 select,
 button {
-  font: 400 1 rem "roboto", sans-serif;
+  font: 400 1rem "roboto", sans-serif;
 }
 
 button {
