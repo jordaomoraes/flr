@@ -12,7 +12,7 @@ const { asPath } = useRouter();
   return (
     <header className={styles.headerContainer}>
       <div className={styles.headerContent}>
-        <img src="/images/logo_novo.png" alt="logo FLR"></img>
+      <img src="/images/logo_flr.svg" alt="logo FLR"></img>
 
         <nav>                    
             <Link href="/Contabilidade"><a className={styles.active}>Contabilidade</a></Link>
