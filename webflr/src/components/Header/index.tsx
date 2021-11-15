@@ -1,27 +1,31 @@
 import styles from './styles.module.scss'
 
 import Link from 'next/link';
-import { useRouter } from 'next/router';
+
+import { ActiveLink } from '../ActiveLink';
 
 
 export function Header() {
-
-const { asPath } = useRouter();
 
 
   return (
     <header className={styles.headerContainer}>
       <div className={styles.headerContent}>
-      <img src="/images/logo_flr.svg" alt="logo FLR"></img>
-
+              <img src="/images/logo_flr.svg" alt="logo FLR"></img>               
         <nav>                    
-            <Link href="/Contabilidade"><a className={styles.active}>Contabilidade</a></Link>
-            <Link href="/Pericia"><a className={styles.active}>Pericia</a></Link>
-            <Link href="/Pericia"><a className={styles.active}>Regularização Obras</a></Link>
-            <Link href="/Pericia"><a className={styles.active}>Curso / Mentoria</a></Link>
-            <Link href="/Downloads"><a className={styles.active}>Downloads</a></Link>
-            <Link href="/Contato"><a className={styles.active}>Contato</a></Link>
-            <Link href="/QuemSou"><a className={styles.active}>Quem Sou</a></Link>
+            <ActiveLink activeClassName={styles.active} href="/Contabilidade"><a>Contabilidade</a></ActiveLink>
+
+            <ActiveLink activeClassName={styles.active}  href="/Pericia"><a>Pericia</a></ActiveLink>
+
+            <ActiveLink activeClassName={styles.active}href="/Obras"><a>Regularização Obras</a></ActiveLink>
+
+            <ActiveLink activeClassName={styles.active}href="/Curso"><a >Curso / Mentoria</a></ActiveLink>
+
+            <ActiveLink activeClassName={styles.active}href="/Downloads"><a>Downloads</a></ActiveLink>
+
+            <ActiveLink activeClassName={styles.active}href="/Contato"><a>Contato</a></ActiveLink>
+
+            <ActiveLink activeClassName={styles.active}href="/QuemSou"><a>Quem Sou</a></ActiveLink>
         </nav>
       </div>
     </header>
